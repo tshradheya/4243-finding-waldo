@@ -12,6 +12,7 @@ def extract_templates(image_id):
     image_dir = 'datasets/JPEGImages'
     anno_dir = 'datasets/Annotations'
     image_file = os.path.join(image_dir, '{}.jpg'.format(image_id))
+    print(image_file)
     anno_file = os.path.join(anno_dir, '{}.xml'.format(image_id))
     assert os.path.exists(image_file), '{} not found.'.format(image_file)
     assert os.path.exists(anno_file), '{} not found.'.format(anno_file)
@@ -21,8 +22,8 @@ def extract_templates(image_id):
     occurrences = {'waldo': 0, 'wenda': 0, 'wizard': 0}
     image = np.asarray(plt.imread(image_file))
     for key in occurrences.keys():
-        if not os.path.exists('templates/' + key + '/' + image_id):
-            os.makedirs('templates/' + key + '/' + image_id)
+        if not os.path.exists('test/templates/' + key + '/' + image_id):
+            os.makedirs('test/templates/' + key + '/' + image_id)
     for idx, obj in enumerate(objs):
         name = obj.find('name').text
         bbox = obj.find('bndbox')
@@ -30,7 +31,7 @@ def extract_templates(image_id):
         y1 = int(bbox.find('ymin').text)
         x2 = int(bbox.find('xmax').text)
         y2 = int(bbox.find('ymax').text)
-        plt.imsave('templates/'
+        plt.imsave('test/templates/'
                    + name
                    + '/'
                    + image_id
@@ -39,10 +40,15 @@ def extract_templates(image_id):
                    image[y1:y2, x1:x2])
         occurrences[name] += 1
     for key in occurrences.keys():
-        if len(os.listdir('templates/' + key + '/' + image_id)) == 0:
-            os.rmdir('templates/' + key + '/' + image_id)
+        if len(os.listdir('test/templates/' + key + '/' + image_id)) == 0:
+            os.rmdir('test/templates/' + key + '/' + image_id)
 
 
-for name in os.listdir("datasets/JPEGImages"):
-    # print(name[0:3])
-    extract_templates(name[0:3])
+# for name in os.listdir("datasets/JPEGImages"):
+#     # print(name[0:3])
+#     extract_templates(name[0:3])
+
+filename = 'datasets/ImageSets/val.txt'
+with open(filename) as f:
+    for img_id in f.readlines():
+        extract_templates(img_id.rstrip())
