@@ -19,25 +19,7 @@ from utils import *
 
 
 def bags_of_sifts_spm(image_paths, vocab_filename, depth=3):
-    """
-    Bags of sifts with spatial pyramid matching.
-
-    :param image_paths: paths to N images
-    :param vocab_filename: Path to the precomputed vocabulary.
-          This function assumes that vocab_filename exists and contains an
-          vocab_size x 128 ndarray 'vocab' where each row is a kmeans centroid
-          or visual word. This ndarray is saved to disk rather than passed in
-          as a parameter to avoid recomputing the vocabulary every run.
-    :param depth: Depth L of spatial pyramid. Divide images and compute (sum)
-          bags-of-sifts for all image partitions for all pyramid levels.
-          Refer to the explanation in the notebook, tutorial slide and the 
-          original paper (Lazebnik et al. 2006.) for more details.
-
-    :return image_feats: N x d matrix, where d is the dimensionality of the
-          feature representation. In this case, d will equal the number of
-          clusters (vocab_size) times the number of regions in all pyramid levels,
-          which is 21 (1+4+16) in this specific case.
-    """
+    
     with open(vocab_filename, 'rb') as f:
         vocab = pickle.load(f)
     
@@ -216,25 +198,20 @@ def svm_probability(train_image_feats, train_labels, test_image_feats):
     svc.fit(train_image_feats, train_labels)
     test_probabilities = svc.predict_proba(test_image_feats)
 
-#     clf = LinearSVC(C=2, probability=True)
-#     clf.fit(train_image_feats, train_labels)
-#     test_labels = clf.predict(test_image_feats)
-
     return test_probabilities
 
 def find_characters(vocab_filename, training_feats, train_labels, test_feats):
     
     window = 64
     f = open('datasets/ImageSets/val.txt')
-    wa = open('baseline_test/waldo.txt', 'w+')
-    we = open('baseline_test/wenda.txt', 'w+')
-    wi = open('baseline_test/wizard.txt', 'w+')
+    wa = open('svm_test/waldo.txt', 'w+')
+    we = open('svm_test/wenda.txt', 'w+')
+    wi = open('svm_test/wizard.txt', 'w+')
     
     image_id = f.readline().rstrip()
     while image_id:
         print(image_id)
         print("processing")
-#         image_id = "003"
         image = np.asarray(plt.imread('datasets/JPEGImages/' + image_id + '.jpg'))
         H, W, chan = image.shape
         img_gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -252,11 +229,9 @@ def find_characters(vocab_filename, training_feats, train_labels, test_feats):
 #             fast = cv2.FastFeatureDetector_create()
 #         # find and draw the keypoints
 #         kp = fast.detect(img_gray,None)
-        img_kp = cv2.drawKeypoints(img_gray, kp, None, color=(0,0,255), flags=cv2.DrawMatchesFlags_DEFAULT)
+#         img_kp = cv2.drawKeypoints(img_gray, kp, None, color=(0,0,255), flags=cv2.DrawMatchesFlags_DEFAULT)
         
-#         plt.figure()
-#         plt.imshow(img_kp)
-#         plt.show()
+
         
         for idx in range(len(kp)):
             j,i = kp[idx].pt
@@ -294,8 +269,7 @@ def find_characters(vocab_filename, training_feats, train_labels, test_feats):
                 y_end = min(y_end, W-1)
 
                 patch = img_gray[x:x_end, y:y_end]
-#                 plt.imshow(patch)
-#                 plt.show()
+
 
                 if (probability[locations[l][k]][k] > 0.4):
                     if k == 0:
@@ -314,29 +288,36 @@ def find_characters(vocab_filename, training_feats, train_labels, test_feats):
         
         
 
-def find_characters_second_check(vocab_filename, training_feats, train_labels, test_feats):
+def find_characters_second_check_svm(vocab_filename, training_feats, train_labels, test_feats, id_char):
     
-    waldo_cascade = cv2.CascadeClassifier('cascade.xml')
+    name = "temp"
+    
+    if id_char == 0:
+        name = "waldo"
+    if id_char == 1:
+        name = "wenda"
+    if id_char == 2:
+        name = "wizard"
+        
+    character_cascade = cv2.CascadeClassifier('cascade/' + name + '/cascade.xml')
 
     window = 64
     f = open('datasets/ImageSets/val.txt')
-    wa = open('baseline_test/waldo.txt', 'w+')
-    we = open('baseline_test/wenda.txt', 'w+')
-    wi = open('baseline_test/wizard.txt', 'w+')
+    wa = open('svm_haar_test/waldo.txt', 'w+')
+    we = open('svm_haar_test/wenda.txt', 'w+')
+    wi = open('svm_haar_test/wizard.txt', 'w+')
     
     image_id = f.readline().rstrip()
     while image_id:
         print(image_id)
         print("processing")
-#         image_id = "003"
         image = np.asarray(plt.imread('datasets/JPEGImages/' + image_id + '.jpg'))
         H, W, chan = image.shape
         img_gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
-
         
-        waldo_candidates, _, weights = waldo_cascade.detectMultiScale3(img_gray, 1.03, 20, outputRejectLevels=True)
-        for idx, (x,y,w,h) in enumerate(waldo_candidates):
+        character_candidates, _, weights = character_cascade.detectMultiScale3(img_gray, 1.03, 10, outputRejectLevels=True)
+        for idx, (x,y,w,h) in enumerate(character_candidates):
             test_feats = []
             i = y
             i_end = y+h
@@ -349,43 +330,12 @@ def find_characters_second_check(vocab_filename, training_feats, train_labels, t
             test_feats.extend(feats)
 
             
-            numOfMax = 5
             probability = svm_probability(training_feats, train_labels, test_feats)
-            if probability[0][0] > 0.5:
-                res = image_id + ' ' + str(probability[0][0]) + ' ' + str(j) + ' ' + str(i) + ' ' + str(j_end) + ' ' + str(i_end) + '\n'
+            if probability[0][id_char] > 0.5:
+                res = image_id + ' ' + str(probability[0][id_char]) + ' ' + str(j) + ' ' + str(i) + ' ' + str(j_end) + ' ' + str(i_end) + '\n'
                 wa.write(res)
-                
 
-#             locations = np.argpartition(-probability, numOfMax, axis =0)[:numOfMax]
 
-        
-#         for k in range(len(locations[0])):
-#             for l in range(numOfMax):
-
-#                 y, x  = kp[locations[l][k]].pt
-
-#                 x = int(np.round(x))
-#                 y = int(np.round(y))
-#                 y_end = y+window
-#                 x_end = x+window
-
-#                 x_end = min(x_end, H-1)
-#                 y_end = min(y_end, W-1)
-
-#                 patch = img_gray[x:x_end, y:y_end]
-# #                 plt.imshow(patch)
-# #                 plt.show()
-
-#                 if (probability[locations[l][k]][k] > 0.4):
-#                     if k == 0:
-#                         res = image_id + ' ' + str(probability[locations[l][k]][k]) + ' ' + str(x) + ' ' + str(y) + ' ' + str(x_end) + ' ' + str(y_end) + '\n'
-#                         wa.write(res)
-#                     if k == 1:
-#                         res = image_id + ' ' + str(np.max(probability[locations[l][k]][k])) + ' ' + str(x) + ' ' + str(y) + ' ' + str(x_end) + ' ' + str(y_end) + '\n'
-#                         we.write(res)
-#                     if k == 2:
-#                         res = image_id + ' ' + str(np.max(probability[locations[l][k]][k])) + ' ' + str(x) + ' ' + str(y) + ' ' + str(x_end) + ' ' + str(y_end) + '\n'
-#                         wi.write(res)
         image_id = f.readline().rstrip()
 
 
