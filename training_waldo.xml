@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+    <name>Waldo Waldo</name>
+    <comment>Dlib tester</comment>
+    <images>
+        <image file="waldo/016/0.jpg">
+            <box height="416" left="1448" top="814" width="408"/>
+        </image>
+        <image file="waldo/016/1.jpg">
+            <box height="193" left="3888" top="5214" width="100"/>
+        </image>
+        <image file="waldo/002/0.jpg">
+            <box height="180" left="827" top="518" width="69"/>
+        </image>
+        <image file="waldo/003/0.jpg">
+            <box height="48" left="292" top="427" width="19"/>
+        </image>
+        <image file="waldo/017/0.jpg">
+            <box height="169" left="5368" top="388" width="71"/>
+        </image>
+        <image file="waldo/017/1.jpg">
+            <box height="1110" left="24" top="463" width="485"/>
+        </image>
+        <image file="waldo/017/2.jpg">
+            <box height="485" left="659" top="3998" width="225"/>
+        </image>
+        <image file="waldo/029/0.jpg">
+            <box height="387" left="7882" top="1239" width="226"/>
+        </image>
+<!--        <image file="waldo/001/0.jpg">-->
+<!--            <box height="338" left="2387" top="976" width="369"/>-->
+<!--        </image>-->
+        <image file="waldo/001/1.jpg">
+            <box height="846" left="5148" top="2784" width="462"/>
+        </image>
+        <image file="waldo/015/0.jpg">
+            <box height="393" left="1064" top="645" width="384"/>
+        </image>
+        <image file="waldo/014/0.jpg">
+            <box height="267" left="5012" top="1269" width="136"/>
+        </image>
+        <image file="waldo/000/0.jpg">
+            <box height="276" left="9564" top="3981" width="184"/>
+        </image>
+        <image file="waldo/028/0.jpg">
+            <box height="40" left="79" top="516" width="28"/>
+        </image>
+        <image file="waldo/004/0.jpg">
+            <box height="2069" left="1538" top="484" width="792"/>
+        </image>
+<!--        <image file="waldo/004/1.jpg">-->
+<!--            <box height="152" left="216" top="5139" width="192"/>-->
+<!--        </image>-->
+<!--        <image file="waldo/004/2.jpg">-->
+<!--            <box height="200" left="969" top="5139" width="204"/>-->
+<!--        </image>-->
+        <image file="waldo/004/3.jpg">
+            <box height="182" left="1747" top="5148" width="174"/>
+        </image>
+<!--        <image file="waldo/004/4.jpg">-->
+<!--            <box height="165" left="2451" top="5152" width="196"/>-->
+<!--        </image>-->
+<!--        <image file="waldo/004/5.jpg">-->
+<!--            <box height="147" left="3264" top="5657" width="200"/>-->
+<!--        </image>-->
+<!--        <image file="waldo/004/6.jpg">-->
+<!--            <box height="191" left="3921" top="5187" width="217"/>-->
+<!--        </image>-->
+        <image file="waldo/010/0.jpg">
+            <box height="331" left="1879" top="976" width="239"/>
+        </image>
+        <image file="waldo/010/1.jpg">
+            <box height="309" left="6108" top="1139" width="148"/>
+        </image>
+        <image file="waldo/038/0.jpg">
+            <box height="508" left="2425" top="88" width="454"/>
+        </image>
+        <image file="waldo/039/0.jpg">
+            <box height="45" left="1713" top="406" width="40"/>
+        </image>
+        <image file="waldo/011/0.jpg">
+            <box height="280" left="2140" top="1376" width="130"/>
+        </image>
+        <image file="waldo/005/0.jpg">
+            <box height="485" left="210" top="5629" width="239"/>
+        </image>
+        <image file="waldo/013/0.jpg">
+            <box height="28" left="1483" top="277" width="26"/>
+        </image>
+        <image file="waldo/007/0.jpg">
+            <box height="377" left="1841" top="776" width="354"/>
+        </image>
+        <image file="waldo/007/1.jpg">
+            <box height="393" left="1622" top="5511" width="192"/>
+        </image>
+        <image file="waldo/006/0.jpg">
+            <box height="631" left="2999" top="853" width="593"/>
+        </image>
+        <image file="waldo/012/0.jpg">
+            <box height="39" left="1387" top="465" width="39"/>
+        </image>
+        <image file="waldo/049/0.jpg">
+            <box height="356" left="8738" top="4909" width="235"/>
+        </image>
+        <image file="waldo/049/1.jpg">
+            <box height="530" left="825" top="561" width="447"/>
+        </image>
+        <image file="waldo/075/0.jpg">
+            <box height="623" left="1279" top="5422" width="385"/>
+        </image>
+        <image file="waldo/061/0.jpg">
+            <box height="438" left="1387" top="5353" width="338"/>
+        </image>
+        <image file="waldo/061/1.jpg">
+            <box height="507" left="941" top="684" width="369"/>
+        </image>
+        <image file="waldo/060/0.jpg">
+            <box height="408" left="8495" top="5691" width="207"/>
+        </image>
+        <image file="waldo/060/1.jpg">
+            <box height="500" left="733" top="461" width="439"/>
+        </image>
+        <image file="waldo/074/0.jpg">
+            <box height="346" left="6910" top="2353" width="308"/>
+        </image>
+        <image file="waldo/074/1.jpg">
+            <box height="523" left="902" top="484" width="493"/>
+        </image>
+        <image file="waldo/048/0.jpg">
+            <box height="877" left="448" top="422" width="347"/>
+        </image>
+        <image file="waldo/048/1.jpg">
+            <box height="931" left="1272" top="391" width="461"/>
+        </image>
+        <image file="waldo/048/2.jpg">
+            <box height="907" left="2218" top="384" width="392"/>
+        </image>
+        <image file="waldo/048/3.jpg">
+            <box height="962" left="3064" top="345" width="423"/>
+        </image>
+        <image file="waldo/048/4.jpg">
+            <box height="931" left="1325" top="4253" width="462"/>
+        </image>
+        <image file="waldo/048/5.jpg">
+            <box height="946" left="2779" top="3307" width="362"/>
+        </image>
+        <image file="waldo/048/6.jpg">
+            <box height="1008" left="6172" top="2330" width="553"/>
+        </image>
+        <image file="waldo/048/7.jpg">
+            <box height="923" left="441" top="2322" width="407"/>
+        </image>
+        <image file="waldo/048/8.jpg">
+            <box height="884" left="4079" top="407" width="431"/>
+        </image>
+        <image file="waldo/048/9.jpg">
+            <box height="900" left="5318" top="484" width="377"/>
+        </image>
+        <image file="waldo/048/10.jpg">
+            <box height="985" left="6248" top="422" width="370"/>
+        </image>
+        <image file="waldo/048/11.jpg">
+            <box height="954" left="7095" top="445" width="400"/>
+        </image>
+        <image file="waldo/048/12.jpg">
+            <box height="908" left="8102" top="422" width="408"/>
+        </image>
+        <image file="waldo/048/13.jpg">
+            <box height="962" left="8956" top="376" width="485"/>
+        </image>
+        <image file="waldo/048/14.jpg">
+            <box height="869" left="810" top="1376" width="423"/>
+        </image>
+        <image file="waldo/048/15.jpg">
+            <box height="954" left="1710" top="1345" width="469"/>
+        </image>
+        <image file="waldo/048/16.jpg">
+            <box height="969" left="2733" top="1345" width="431"/>
+        </image>
+        <image file="waldo/048/17.jpg">
+            <box height="1031" left="3587" top="1268" width="446"/>
+        </image>
+        <image file="waldo/048/18.jpg">
+            <box height="892" left="10" top="1338" width="308"/>
+        </image>
+        <image file="waldo/048/19.jpg">
+            <box height="908" left="787" top="3314" width="415"/>
+        </image>
+        <image file="waldo/048/20.jpg">
+            <box height="939" left="1710" top="3314" width="523"/>
+        </image>
+        <image file="waldo/048/21.jpg">
+            <box height="884" left="5718" top="5238" width="423"/>
+        </image>
+        <image file="waldo/048/22.jpg">
+            <box height="885" left="5764" top="3345" width="431"/>
+        </image>
+        <image file="waldo/048/23.jpg">
+            <box height="946" left="5241" top="2284" width="561"/>
+        </image>
+        <image file="waldo/048/24.jpg">
+            <box height="862" left="5802" top="1391" width="377"/>
+        </image>
+        <image file="waldo/048/25.jpg">
+            <box height="900" left="6764" top="1376" width="454"/>
+        </image>
+        <image file="waldo/048/26.jpg">
+            <box height="992" left="7648" top="1322" width="508"/>
+        </image>
+        <image file="waldo/048/27.jpg">
+            <box height="877" left="8525" top="1407" width="439"/>
+        </image>
+        <image file="waldo/048/28.jpg">
+            <box height="1038" left="1264" top="2253" width="484"/>
+        </image>
+        <image file="waldo/048/29.jpg">
+            <box height="961" left="2195" top="2284" width="446"/>
+        </image>
+        <image file="waldo/048/30.jpg">
+            <box height="916" left="3033" top="2322" width="500"/>
+        </image>
+        <image file="waldo/048/31.jpg">
+            <box height="954" left="4079" top="2291" width="431"/>
+        </image>
+        <image file="waldo/048/32.jpg">
+            <box height="893" left="2218" top="4245" width="423"/>
+        </image>
+        <image file="waldo/062/0.jpg">
+            <box height="148" left="797" top="949" width="100"/>
+        </image>
+        <image file="waldo/076/0.jpg">
+            <box height="59" left="1254" top="74" width="49"/>
+        </image>
+        <image file="waldo/077/0.jpg">
+            <box height="308" left="1202" top="2568" width="262"/>
+        </image>
+        <image file="waldo/077/1.jpg">
+            <box height="523" left="710" top="653" width="377"/>
+        </image>
+        <image file="waldo/063/0.jpg">
+            <box height="415" left="2018" top="2630" width="223"/>
+        </image>
+        <image file="waldo/067/0.jpg">
+            <box height="285" left="4318" top="1653" width="223"/>
+        </image>
+        <image file="waldo/067/1.jpg">
+            <box height="546" left="1564" top="461" width="415"/>
+        </image>
+<!--        <image file="waldo/066/0.jpg">-->
+<!--            <box height="362" left="1495" top="776" width="438"/>-->
+<!--        </image>-->
+        <image file="waldo/070/0.jpg">
+            <box height="85" left="408" top="67" width="73"/>
+        </image>
+        <image file="waldo/064/0.jpg">
+            <box height="45" left="490" top="390" width="39"/>
+        </image>
+        <image file="waldo/064/1.jpg">
+            <box height="79" left="397" top="91" width="68"/>
+        </image>
+        <image file="waldo/058/0.jpg">
+            <box height="400" left="818" top="668" width="377"/>
+        </image>
+<!--        <image file="waldo/059/0.jpg">-->
+<!--            <box height="33" left="230" top="735" width="35"/>-->
+<!--        </image>-->
+        <image file="waldo/071/0.jpg">
+            <box height="130" left="1782" top="1407" width="76"/>
+        </image>
+        <image file="waldo/068/0.jpg">
+            <box height="424" left="2302" top="614" width="385"/>
+        </image>
+        <image file="waldo/068/1.jpg">
+            <box height="461" left="1142" top="6530" width="270"/>
+        </image>
+        <image file="waldo/069/0.jpg">
+            <box height="438" left="3795" top="1238" width="277"/>
+        </image>
+        <image file="waldo/069/1.jpg">
+            <box height="492" left="1525" top="561" width="439"/>
+        </image>
+<!--        <image file="waldo/043/0.jpg">-->
+<!--            <box height="1646" left="718" top="353" width="1684"/>-->
+<!--        </image>-->
+        <image file="waldo/043/1.jpg">
+            <box height="685" left="3779" top="6068" width="231"/>
+        </image>
+        <image file="waldo/057/0.jpg">
+            <box height="82" left="752" top="249" width="24"/>
+        </image>
+        <image file="waldo/056/0.jpg">
+            <box height="37" left="716" top="157" width="20"/>
+        </image>
+        <image file="waldo/056/1.jpg">
+            <box height="76" left="431" top="83" width="58"/>
+        </image>
+        <image file="waldo/042/0.jpg">
+            <box height="96" left="1148" top="289" width="74"/>
+        </image>
+        <image file="waldo/042/1.jpg">
+            <box height="129" left="613" top="131" width="111"/>
+        </image>
+        <image file="waldo/052/0.jpg">
+            <box height="46" left="324" top="624" width="41"/>
+        </image>
+        <image file="waldo/053/0.jpg">
+            <box height="88" left="6093" top="3284" width="67"/>
+        </image>
+        <image file="waldo/051/0.jpg">
+            <box height="170" left="2334" top="2008" width="125"/>
+        </image>
+        <image file="waldo/079/0.jpg">
+            <box height="134" left="6844" top="2868" width="123"/>
+        </image>
+        <image file="waldo/079/1.jpg">
+            <box height="377" left="1010" top="542" width="354"/>
+        </image>
+        <image file="waldo/078/0.jpg">
+            <box height="261" left="3251" top="4720" width="103"/>
+        </image>
+        <image file="waldo/044/0.jpg">
+            <box height="392" left="5518" top="2522" width="192"/>
+        </image>
+        <image file="waldo/044/1.jpg">
+            <box height="515" left="756" top="453" width="439"/>
+        </image>
+        <image file="waldo/050/0.jpg">
+            <box height="248" left="4775" top="2884" width="88"/>
+        </image>
+        <image file="waldo/037/0.jpg">
+            <box height="74" left="703" top="507" width="38"/>
+        </image>
+<!--        <image file="waldo/022/0.jpg">-->
+<!--            <box height="270" left="3410" top="2382" width="67"/>-->
+<!--        </image>-->
+        <image file="waldo/036/0.jpg">
+            <box height="260" left="614" top="488" width="260"/>
+        </image>
+        <image file="waldo/008/0.jpg">
+            <box height="477" left="810" top="4827" width="254"/>
+        </image>
+<!--        <image file="waldo/020/0.jpg">-->
+<!--            <box height="340" left="6140" top="1954" width="88"/>-->
+<!--        </image>-->
+        <image file="waldo/020/1.jpg">
+            <box height="200" left="1164" top="633" width="175"/>
+        </image>
+<!--        <image file="waldo/034/0.jpg">-->
+<!--            <box height="400" left="964" top="799" width="392"/>-->
+<!--        </image>-->
+        <image file="waldo/021/0.jpg">
+            <box height="149" left="200" top="1877" width="80"/>
+        </image>
+        <image file="waldo/009/0.jpg">
+            <box height="83" left="2217" top="1220" width="37"/>
+        </image>
+        <image file="waldo/009/1.jpg">
+            <box height="117" left="547" top="100" width="97"/>
+        </image>
+        <image file="waldo/025/0.jpg">
+            <box height="410" left="3030" top="3132" width="143"/>
+        </image>
+        <image file="waldo/031/0.jpg">
+            <box height="107" left="2247" top="4716" width="90"/>
+        </image>
+        <image file="waldo/019/0.jpg">
+            <box height="88" left="1562" top="537" width="70"/>
+        </image>
+        <image file="waldo/019/1.jpg">
+            <box height="110" left="559" top="98" width="86"/>
+        </image>
+        <image file="waldo/018/0.jpg">
+            <box height="408" left="1933" top="668" width="362"/>
+        </image>
+        <image file="waldo/018/1.jpg">
+            <box height="685" left="2479" top="3945" width="323"/>
+        </image>
+        <image file="waldo/032/0.jpg">
+            <box height="203" left="2365" top="3353" width="191"/>
+        </image>
+<!--        <image file="waldo/032/1.jpg">-->
+<!--            <box height="174" left="3094" top="2429" width="203"/>-->
+<!--        </image>-->
+        <image file="waldo/032/2.jpg">
+            <box height="89" left="2588" top="2529" width="83"/>
+        </image>
+<!--        <image file="waldo/032/3.jpg">-->
+<!--            <box height="200" left="3874" top="2424" width="202"/>-->
+<!--        </image>-->
+<!--        <image file="waldo/032/4.jpg">-->
+<!--            <box height="191" left="3109" top="3365" width="200"/>-->
+<!--        </image>-->
+<!--        <image file="waldo/032/5.jpg">-->
+<!--            <box height="144" left="3982" top="3894" width="189"/>-->
+<!--        </image>-->
+        <image file="waldo/032/6.jpg">
+            <box height="6647" left="45" top="314" width="2377"/>
+        </image>
+<!--        <image file="waldo/032/7.jpg">-->
+<!--            <box height="246" left="3892" top="4265" width="238"/>-->
+<!--        </image>-->
+        <image file="waldo/026/0.jpg">
+            <box height="83" left="1578" top="593" width="37"/>
+        </image>
+        <image file="waldo/026/1.jpg">
+            <box height="159" left="601" top="1334" width="67"/>
+        </image>
+        <image file="waldo/026/2.jpg">
+            <box height="89" left="588" top="240" width="65"/>
+        </image>
+        <image file="waldo/027/0.jpg">
+            <box height="180" left="1779" top="4188" width="75"/>
+        </image>
+        <image file="waldo/033/0.jpg">
+            <box height="230" left="3151" top="6761" width="191"/>
+        </image>
+    </images>
+</dataset>

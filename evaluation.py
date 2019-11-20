@@ -7,7 +7,7 @@
 
 from voc_eval import *
 
-detpath = 'baseline/{}.txt'
+detpath = 'baseline_test_cod/{}.txt'
 annopath = 'datasets/Annotations/{}.xml'
 imagesetfile = 'datasets/ImageSets/val.txt'
 cachedir = 'cache_anno'
@@ -20,4 +20,5 @@ for idx, classname in enumerate(classes) :
     meanAP += ap
     print('{}: {}'.format(classname, ap))
 
-print('meanAP: {}'.format(meanAP/len(classes)))
+print('meanAP: '
+      '{}'.format(meanAP/len(classes)))
